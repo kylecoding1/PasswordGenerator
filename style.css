@@ -58,6 +58,46 @@ header {
     background: #e7e9eb;
     height: 2px;
 }
+/* Card body style rules */
+.section-body {
+    min-height: 100px;
+}
 
+/* Card footer style rules */
+.section-footer {
+    text-align: center;
+}
+
+/* Card footer border-top style rules */
+.section-footer::before {
+    content: " ";
+    display: block;
+    width: 100%;
+    background: #e7e9eb;
+    height: 2px;
+}
+/* Card footer clear rule */
+.section-footer::after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+/* Button style rules */
+.btn-generate {
+    border: none;
+    background-color: hsl(360, 91%, 36%);
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+      0px;
+    color: hsl(0, 0%, 100%);
+    display: inline-block;
+    font-size: 22px;
+    line-height: 22px;
+    margin: 16px 16px 16px 20px;
+    padding: 14px 34px;
+    text-align: center;
+    cursor: pointer;
+}
 
 
