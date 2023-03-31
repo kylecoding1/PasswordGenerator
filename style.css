@@ -99,5 +99,61 @@ header {
     text-align: center;
     cursor: pointer;
 }
+/* Disabled button cursor style rule */
+button[disabled] {
+    cursor: default;
+    background: #c0c7cf;
+}
+
+/* Float */
+.right {
+float: right;
+}
+
+/* Password input field style rules */
+#password {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    display: block;
+    width: 100%;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    font-size:1.2rem;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px dashed #c0c7cf;
+    border-radius: 6px;
+    resize: none;
+    overflow: hidden;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .btn-generate {
+        font-size: 18px;
+        margin: 16px 0px 0px 0px;
+        padding: 10px 15px;
+    }
+    
+    #password {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .btn-generate {
+        font-size: 16px;
+    }
+    
+    #password {
+        font-size: 0.9rem;
+    }
+}
+
 
 
