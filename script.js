@@ -25,3 +25,34 @@ function generatePassword() {
         return "";
       }
     }
+     // concatenate all possible characters based on user choices
+     if (useDefault || confirm("Do you want to include numeric characters?")) {
+        possibleCharacters += numericCharacters;
+      }
+      if (useDefault || confirm("Do you want to include uppercase characters?")) {
+        possibleCharacters += uppercaseCharacters;
+      }
+      if (useDefault || confirm("Do you want to include lowercase characters?")) {
+        possibleCharacters += lowercaseCharacters;
+      }
+      if (useDefault || confirm("Do you want to include special characters?")) {
+        possibleCharacters += specialCharacters;
+      }
+    
+      // generate the password
+      var password = "";
+      for (var i = 0; i < length; i++) {
+        password += possibleCharacters.charAt(Math.floor(Math.random() * possibleCharacters.length));
+      }
+    
+      return password;
+    }
+    // get references to DOM elements
+  var generateButton = document.getElementById("generate");
+  var passwordTextarea = document.getElementById("password");
+  
+  // add event listener to button
+  generateButton.addEventListener("click", function() {
+    var password = generatePassword();
+    passwordTextarea.value = password;
+  });
