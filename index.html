@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="title">Password Generator</h1>
+      </header>
+      <div class="wrapper">
+        <div class="section-header">
+          <h2 class="header-text">Generate a Password</h2>
+        </div>
+        <div class="section-body">
+          <textarea
+            readonly
+            id="password"
+            class="password-field"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+        <div class="section-footer">
+          <button id="generate" class="btn-generate">Generate Password</button>
+        </div>
+      </div>
+    </div>
+    <script src="myscript.js"></script>
+    <script>
+      var generateButton = document.getElementById("generate");
+      generateButton.addEventListener("click", writePassword);
+    </script>
+  </body>
+</html>
